@@ -1,0 +1,47 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Regression By Parameter" verbose="1">
+
+    <test name="Positive Login Test">
+        <parameter name="Browser" value="firefox"></parameter>
+        <parameter name="Username" value="Admin.user"></parameter>
+        <parameter name="Password" value="Adminuser@1234"></parameter>
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.testAllsuites.automation.LoginByParameter">
+                <methods>
+                    <include name="validLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Invalid Username Test">
+        <parameter name="Browser" value="edge"/>
+        <parameter name="Username" value="Admin.user11"/>
+        <parameter name="Password" value="Adminuser@1234"/>
+        <classes>
+            <class name="com.testAllsuites.automation.LoginByParameter">
+                <methods>
+                    <include name="inValidLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Invalid Password Test">
+        <parameter name="Browser" value="chrome"></parameter>
+        <parameter name="Username" value="Admin.user"></parameter>
+        <parameter name="Password" value="Adminuser@12345"></parameter>
+        <parameter name="expectedErrorMessage" value="Your password is invalid!"/>
+        <classes>
+            <class name="com.testAllsuites.automation.LoginByParameter">
+                <methods>
+                    <include name="inValidPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

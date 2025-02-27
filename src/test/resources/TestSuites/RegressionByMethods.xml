@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Regression Test Suites" verbose="1">
+
+        <test name="Test Run by Individual Method">
+            <classes>
+                <class name="com.demoblaze.automation.login.LoginFunctionality">
+                    <methods>
+                        <include name="validLogin"></include>
+                        <include name="inValidLogin"></include>
+                        <include name="inValidPassword"></include>
+                    </methods>
+                </class>
+
+                <class name="com.demoblaze.automation.login.LogoutFunctionality">
+                    <methods>
+                        <include name="successfulLogout"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+</suite>

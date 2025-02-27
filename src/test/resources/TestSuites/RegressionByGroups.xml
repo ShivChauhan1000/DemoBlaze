@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regression Test Suites" verbose="1">
+
+            <test name="Regression by selected groups">
+                <groups>
+                    <run>
+                       <include name="login"></include>
+                       <exclude name="smoke"></exclude>
+                    </run>
+                </groups>
+
+                <packages>
+                         <package name="com.demoblaze.automation.login"/>
+                </packages>
+            </test>
+
+<!--        <test name="Regression by Random groups">-->
+<!--            <groups>-->
+<!--                <run>-->
+<!--                    <include name="random"></include>-->
+<!--                </run>-->
+<!--            </groups>-->
+
+<!--            <packages>-->
+<!--                <package name="com.demoblaze.automation.login"/>-->
+<!--            </packages>-->
+<!--        </test>-->
+</suite>

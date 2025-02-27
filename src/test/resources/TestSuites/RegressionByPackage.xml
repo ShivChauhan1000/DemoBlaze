@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Regression Test Suites" verbose="1">
+
+    <test name="All Tests by Package">
+        <packages>
+            <package name="com.demoblaze.automation.login"/>
+        </packages>
+    </test>
+
+</suite>
